@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.29797979797979796" prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="549.0" prefWidth="250.0">
+         <children>
+            <Button fx:id="oneButton" layoutX="20.0" layoutY="160.0" mnemonicParsing="false" onAction="#calculation" prefHeight="30.0" prefWidth="30.0" text="1" />
+            <Button fx:id="two" layoutX="60.0" layoutY="160.0" mnemonicParsing="false" onAction="#calculation" prefHeight="30.0" prefWidth="30.0" text="2" />
+            <Button fx:id="three" layoutX="100.0" layoutY="160.0" mnemonicParsing="false" onAction="#calculation" prefHeight="30.0" prefWidth="30.0" text="3" />
+            <Button fx:id="zero" layoutX="20.0" layoutY="200.0" mnemonicParsing="false" onAction="#calculation" prefHeight="30.0" prefWidth="30.0" text="0" />
+            <Button fx:id="four" layoutX="20.0" layoutY="120.0" mnemonicParsing="false" onAction="#calculation" prefHeight="30.0" prefWidth="30.0" text="4" />
+            <Button fx:id="five" layoutX="60.0" layoutY="120.0" mnemonicParsing="false" onAction="#calculation" prefHeight="30.0" prefWidth="30.0" text="5" />
+            <Button fx:id="six" layoutX="100.0" layoutY="120.0" mnemonicParsing="false" onAction="#calculation" prefHeight="30.0" prefWidth="30.0" text="6" />
+            <Button fx:id="seven" layoutX="20.0" layoutY="80.0" mnemonicParsing="false" onAction="#calculation" prefHeight="30.0" prefWidth="30.0" text="7" />
+            <Button fx:id="eight" layoutX="60.0" layoutY="80.0" mnemonicParsing="false" onAction="#calculation" prefHeight="30.0" prefWidth="30.0" text="8" />
+            <Button fx:id="nine" layoutX="100.0" layoutY="80.0" mnemonicParsing="false" onAction="#calculation" prefHeight="30.0" prefWidth="30.0" text="9" />
+            <Button fx:id="plusButton" layoutX="170.0" layoutY="80.0" mnemonicParsing="false" onAction="#calculation" prefHeight="30.0" prefWidth="30.0" text="+" />
+            <Button fx:id="minusButton" layoutX="170.0" layoutY="120.0" mnemonicParsing="false" onAction="#calculation" prefHeight="30.0" prefWidth="30.0" text="-" />
+            <Button fx:id="powerButton" layoutX="170.0" layoutY="160.0" mnemonicParsing="false" onAction="#calculation" prefHeight="30.0" prefWidth="30.0" text="^" />
+            <Button layoutX="170.0" layoutY="200.0" mnemonicParsing="false" onAction="#calculation" prefHeight="30.0" prefWidth="30.0" text="x" fx:id="xButton" />
+            <Button fx:id="additionOpButton" layoutX="35.0" layoutY="310.0" mnemonicParsing="false" onAction="#addition" prefHeight="26.0" prefWidth="160.0" text="Addition" />
+            <Button fx:id="subtractionOpButton" layoutX="35.0" layoutY="350.0" mnemonicParsing="false" onAction="#subtraction" prefHeight="26.0" prefWidth="160.0" text="Subtraction" />
+            <Button fx:id="multiplicationOpButton" layoutX="35.0" layoutY="390.0" mnemonicParsing="false" onAction="#multiplication" prefHeight="26.0" prefWidth="160.0" text="Multiplication" />
+            <Button fx:id="divisionOpButton" layoutX="35.0" layoutY="430.0" mnemonicParsing="false" onAction="#division" prefHeight="26.0" prefWidth="160.0" text="Division" />
+            <Button fx:id="IntegrationOpButton" layoutX="35.0" layoutY="510.0" mnemonicParsing="false" onAction="#integration" prefHeight="26.0" prefWidth="160.0" text="Integration" />
+            <Button fx:id="derivativeOpButton" layoutX="35.0" layoutY="470.0" mnemonicParsing="false" onAction="#derivative" prefHeight="26.0" prefWidth="160.0" text="Derivative" />
+            <Button fx:id="clearButton" layoutX="22.0" layoutY="240.0" mnemonicParsing="false" onAction="#clear" prefHeight="26.0" prefWidth="55.0" style="-fx-background-color: #F7886C;" text="C" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="530.0" prefWidth="520.0">
+         <children>
+            <TextField fx:id="p1TextField" layoutX="160.0" layoutY="40.0" onMouseClicked="#p1Clicked" prefHeight="26.0" prefWidth="300.0" promptText="Polynomial 1" />
+            <TextField fx:id="p2TextField" layoutX="160.0" layoutY="80.0" onMouseClicked="#p2Clicked" prefHeight="26.0" prefWidth="300.0" promptText="Polynomial 2" />
+            <Text layoutX="39.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Polynomial :" wrappingWidth="120.923828125" />
+            <Text layoutX="39.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Second Polynomial :" wrappingWidth="120.923828125" />
+            <TextField fx:id="resultTextField" layoutX="160.0" layoutY="140.0" prefHeight="26.0" prefWidth="300.0" promptText="Result" />
+            <TextField fx:id="auxResultTextField" layoutX="160.0" layoutY="181.0" prefHeight="26.0" prefWidth="300.0" promptText="Auxiliary Result" />
+            <Text fx:id="resultText" layoutX="39.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="120.923828125" />
+            <Text fx:id="auxResultText" layoutX="39.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="120.923828125" />
+            <Text fx:id="incorrectText" fill="RED" layoutX="160.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="300.0000000000001" />
+            <Text layoutX="51.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please input the polynomials as shown in the next exaple: 2x^3+x^2-x+1." wrappingWidth="421.0" />
+            <Text layoutX="51.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please don't include the multiplication operator (*) between the coefficient and the variable. " wrappingWidth="421.0" />
+            <Text layoutX="51.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you'd like, you can include the ^1 and the ^0 powers to the variable x, but they can also be omitted." wrappingWidth="421.0" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
