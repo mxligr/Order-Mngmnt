@@ -8,5 +8,6 @@ The GUI contains: <br>
 - a window for client operations: add new client, edit client, delete client, view all clients in a table; <br>
 - a window for product operations: same as client operations; <br>
 - a window for creating product orders: the user is able to select an existing product, select an existing client, and insert a desired quantity for the product to create a valid order. <br>
+
 After placing an order, a .pdf bill is generated.
 
